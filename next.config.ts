@@ -1,12 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-  env: {
-    GEMINI_API_KEY: process.env.GEMINI_API_KEY,
-    CLAUDE_API_KEY: process.env.CLAUDE_API_KEY,
-  },
-}
+import type { NextConfig } from "next";
 
-module.exports = nextConfig
+const nextConfig: NextConfig = {
+  /* config options here */
+  env: {
+  GEMINI_API_KEY: process.env.GEMINI_API_KEY
+}
+};
+
+export default nextConfig;

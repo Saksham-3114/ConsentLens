@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'ConsentLens - Legal Text Analyzer',
-  description: 'Decode legal jargon and understand what you\'re really agreeing to. Analyze privacy policies and terms of service in seconds.',
-  keywords: 'privacy policy, terms of service, legal analysis, AI, consent',
+  title: 'ConsentLens | AI Legal Document Analyzer',
+  description: 'Understand privacy policies and terms of service with AI-powered analysis. Get clear summaries and risk assessments in seconds.',
+  keywords: 'privacy policy, terms of service, legal analysis, AI, document analyzer',
+  authors: [{ name: 'ConsentLens Team' }],
+  viewport: 'width=device-width, initial-scale=1',
 }
 
 export default function RootLayout({
@@ -16,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className="antialiased">{children}</body>
     </html>
   )
 }
